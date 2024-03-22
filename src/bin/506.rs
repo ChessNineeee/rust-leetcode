@@ -11,7 +11,7 @@ pub fn find_relative_ranks(score: Vec<i32>) -> Vec<String> {
     let medals_name = vec!["Gold Medal", "Silver Medal", "Bronze Medal"];
 
     let mut rank = 0;
-    for (value, idx) in set.into_iter().rev() {
+    for (_, idx) in set.into_iter().rev() {
         if rank < medals_name.len() {
             res[idx] = medals_name[rank].to_string();
         } else {
