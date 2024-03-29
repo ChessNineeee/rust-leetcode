@@ -1,6 +1,6 @@
-use std::collections::{BTreeSet, HashMap, HashSet};
+use std::collections::{BTreeSet, HashMap};
 
-fn gcd(mut x: i32, mut y: i32) -> i32 {
+fn gcd(x: i32, y: i32) -> i32 {
     if x == 0 {
         y
     } else {
