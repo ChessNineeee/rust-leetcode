@@ -7,6 +7,7 @@ fn gcd(x: i32, y: i32) -> i32 {
         gcd(y % x, x)
     }
 }
+
 pub fn has_groups_size_x(deck: Vec<i32>) -> bool {
     let set = deck
         .into_iter()
@@ -20,6 +21,7 @@ pub fn has_groups_size_x(deck: Vec<i32>) -> bool {
 
     set.into_iter().fold(0, |acc, v| gcd(acc, v)) >= 2
 }
+
 fn main() {
     println!("{}", has_groups_size_x(vec![1, 1, 1, 2, 2, 2, 2, 2, 2, 1]))
 }
